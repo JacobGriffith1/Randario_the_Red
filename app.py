@@ -1,7 +1,9 @@
 from flask import Flask, jsonify
 import requests
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route('/wizard/fact', methods=['GET'])
@@ -52,6 +54,24 @@ def get_fortune():
     except Exception as e:
         print(f"Error occurred: {e}")  # Debugging statement
         return jsonify({"error": "An unexpected error occurred"}), 500
+
+
+@app.route('/dad-joke', methods=['GET'])
+def get_dad_joke():
+    api_url = 'https://icanhazdadjoke.com/'
+    headers = {
+        'Accept': 'application/json',
+        'User-Agent': 'MyApp (https://github.com/your-repo)'  # Replace with your own info
+    }
+    try:
+        response = requests.get(api_url, headers=headers)
+        response.raise_for_status()
+        joke_data = response.json()
+        joke = joke_data.get('joke', 'No joke available')
+        return jsonify({"joke": joke})
+    except requests.RequestException as e:
+        print(f"Error occurred: {e}")
+        return jsonify({"error": "Failed to fetch data from the dad joke API"}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)
