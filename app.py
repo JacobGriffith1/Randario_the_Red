@@ -73,5 +73,24 @@ def get_dad_joke():
         print(f"Error occurred: {e}")
         return jsonify({"error": "Failed to fetch data from the dad joke API"}), 500
 
+
+@app.route('/frog-love-advice', methods=['GET'])
+def get_love_advice():
+    api_url = "https://love-quote.p.rapidapi.com/lovequote"
+    headers = {
+        'x-rapidapi-key': '7387755acemsh5ca89585b8ce843p114431jsn9b4903b4b38a',
+        'x-rapidapi-host': 'love-quote.p.rapidapi.com'
+    }
+
+    try:
+        response = requests.get(api_url, headers=headers)
+        response.raise_for_status()  # Raise an exception for HTTP errors
+        advice_data = response.json()
+        advice = advice_data.get('quote', 'No advice available')
+        return jsonify({"advice": advice})
+    except requests.RequestException as e:
+        print(f"Error occurred: {e}")
+        return jsonify({"error": "Failed to fetch data from the love advice API"}), 500
+
 if __name__ == '__main__':
     app.run(debug=True)
