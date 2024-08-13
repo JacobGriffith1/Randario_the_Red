@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 import requests
 from flask_cors import CORS
 import random
@@ -28,7 +28,7 @@ def get_fun_fact():
         fun_fact = fun_fact_data.get('text', 'No fact available')
 
         # Return the fun fact as a JSON response
-        return jsonify({"fact": fun_fact})
+        return render_template("index.html", **fun_fact)
 
     except Exception as e:
         print(f"Error occurred: {e}")
