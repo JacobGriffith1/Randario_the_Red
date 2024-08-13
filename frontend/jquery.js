@@ -1,11 +1,21 @@
-$(document).ready(function() {
-    function fetchRandomFact() {
+$(document).ready(function() { 
+    
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    //-- Wizard Facts --
+    async function fetchRandomFact() {
         $.ajax({
             url: 'https://uselessfacts.jsph.pl/api/v2/facts/random',
             method: 'GET',
             success: function(data) {
                 var fact = data.text;
                 $('.wizard_quote').text(fact);
+                $('.wizard_image img').attr('src', '/images/wizardHappy.png');
+                setTimeout(function (){
+                    $('.wizard_image img').attr('src', '/images/wizardNeutral.png');
+                  }, 1000);
                 console.log('quote changed!');
             },
             error: function() {
@@ -19,10 +29,9 @@ $(document).ready(function() {
         console.log('wizard clicked!');
         fetchRandomFact();
     });
-});
 
-$(document).ready(function() {
-    function fetchRandomFact() {
+    //-- Crystal Fortune --
+    function fetchRandomFortune() {
         $.ajax({
             url: 'https://aphorismcookie.herokuapp.com',
             method: 'GET',
@@ -40,12 +49,11 @@ $(document).ready(function() {
 
     $('.crystal_image').on('click', function() {
         console.log('crystal clicked!');
-        fetchRandomFact();
+        fetchRandomFortune();
     });
-});
 
-$(document).ready(function() {
-    function fetchRandomFact() {
+    //-- Dad Joke Book --
+    function fetchRandomJoke() {
         $.ajax({
             url: 'https://icanhazdadjoke.com/',
             method: 'GET',
@@ -55,7 +63,7 @@ $(document).ready(function() {
                 console.log('quote changed!');
             },
             error: function() {
-                $('.dad_quote').text('You aren't holding the flashlight!');
+                $('.dad_quote').text('You arent holding the flashlight!');
                 console.log('error!');
             }
         });
@@ -63,12 +71,11 @@ $(document).ready(function() {
 
     $('.dad_image').on('click', function() {
         console.log('dad clicked!');
-        fetchRandomFact();
+        fetchRandomJoke();
     });
-});
 
-$(document).ready(function() {
-    function fetchRandomFact() {
+    //-- Frog Love Advice --
+    function fetchRandomAdvice() {
         $.ajax({
             url: 'https://love-quote.p.rapidapi.com/lovequote',
             method: 'GET',
@@ -86,6 +93,6 @@ $(document).ready(function() {
 
     $('.frog_image').on('click', function() {
         console.log('frog clicked!');
-        fetchRandomFact();
+        fetchRandomAdvice();
     });
 });

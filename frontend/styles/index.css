@@ -48,7 +48,7 @@ body {
 .wizard_textbox {
     position: absolute;
     bottom: 60%; /* Adjust positioning */
-    left: 18%; /* Adjust positioning */
+    left: 16%; /* Adjust positioning */
     background-image: url('/images/scroll.png'); /* Your scroll image */
     background-size: contain;
     background-repeat: no-repeat;
