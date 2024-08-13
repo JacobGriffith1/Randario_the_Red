@@ -8,7 +8,7 @@ CORS(app)
 
 
 @app.route('/wizard/fact', methods=['GET'])
-def get_fun_fact():
+def get_wizard_fact():
     # New API URL for random facts
     api_url = "https://uselessfacts.jsph.pl/api/v2/facts/random"
 
@@ -22,13 +22,13 @@ def get_fun_fact():
             return jsonify({"error": f"API request failed with status {response.status_code}: {response.text}"}), 500
 
         # Parse the response
-        fun_fact_data = response.json()
+        wizard_fact_data = response.json()
 
         # Extracting the information
-        fun_fact = fun_fact_data.get('text', 'No fact available')
+        wizard_fact = wizard_fact_data.get('text', 'No fact available')
 
         # Return the fun fact as a JSON response
-        return render_template("index.html", **fun_fact)
+        return render_template("index.html", wizard_fact)
 
     except Exception as e:
         print(f"Error occurred: {e}")
