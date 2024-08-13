@@ -45,6 +45,28 @@ body {
    bottom: 0px; 
 }
 
+.wizard_textbox {
+    position: absolute;
+    bottom: 60%; /* Adjust positioning */
+    left: 18%; /* Adjust positioning */
+    background-image: url('/images/scroll.png'); /* Your scroll image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
+    padding: 20px;
+    width: 250px; /* Adjust as needed */
+    height: 200px;
+    opacity: 0.8; /* Adjust opacity if needed */
+    display: flex;
+    align-items: center;
+}
+.wizard_quote {
+    font-size: 1.2em; /* Adjust font size as needed */
+    text-align: center;
+    flex: 1;
+}
+
 .footer_content {
     width: 100%;
     height: 20px;
