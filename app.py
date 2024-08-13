@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 import requests
 from flask_cors import CORS
+import random
 
 app = Flask(__name__)
 CORS(app)
@@ -91,6 +92,44 @@ def get_love_advice():
     except requests.RequestException as e:
         print(f"Error occurred: {e}")
         return jsonify({"error": "Failed to fetch data from the love advice API"}), 500
+
+insults = {
+    "part1": [
+        'artless', 'bawdy', 'beslubbering', 'bootless', 'churlish', 'cockered', 'clouted', 'craven', 'currish', 
+        'dankish', 'dissembling', 'droning', 'errant', 'fawning', 'fobbing', 'froward', 'frothy', 'gleeking', 
+        'goatish', 'gorbellied', 'impertinent', 'infectious', 'jarring', 'joggerheaded', 'lumpish', 'mammering', 
+        'mangled', 'mewling', 'paunchy', 'pribbling', 'puking', 'puny', 'rank', 'reeky', 'roguish', 'ruftish', 
+        'saucy', 'spleeny', 'spongy', 'surly', 'tottering', 'unmuzzled', 'vain', 'venomed', 'villainous', 'warped', 
+        'wayward', 'weedy', 'yeasty'
+    ],
+    "part2": [
+        'base-court', 'bat-fowling', 'beef-witted', 'beetle-headed', 'boil-brained', 'clapper-clawed', 
+        'clay-brained', 'common-kissing', 'crook-pated', 'dismal-dreaming', 'dizzy-eyed', 'doghearted', 
+        'dread-bolted', 'earth-vexing', 'elf-skinned', 'fat-kidneyed', 'fen-sucked', 'flap-mouthed', 
+        'fly-bitten', 'folly-fallen', 'fool-born', 'full-gorged', 'guts-griping', 'half-faced', 'hasty-witted', 
+        'hedge-born', 'hell-hated', 'idle-headed', 'ill-breeding', 'ill-nurtured', 'knotty-pated', 'milk-livered', 
+        'motley-minded', 'onion-eyed', 'plume-plucked', 'pottle-deep', 'pox-marked', 'reeling-ripe', 'rough-hewn', 
+        'rude-growing', 'rump-fed', 'shard-borne', 'sheep-biting', 'spur-galled', 'swag-bellied', 'tardy-gaited', 
+        'tickle-brained', 'toad-spotted', 'unchin-snouted', 'weather-bitten'
+    ],
+    "part3": [
+        'apple-john', 'baggage', 'barnacle', 'bladder', 'boar-pig', 'bugbear', 'bum-bailey', 'canker-blossom', 
+        'clack-dish', 'clotpole', 'coxcomb', 'codpiece', 'death-token', 'dewberry', 'flap-dragon', 'flax-wench', 
+        'flirt-gill', 'foot-licker', 'fustilarian', 'giglet', 'gudgeon', 'haggard', 'harpy', 'hedge-pig', 
+        'horn-beast', 'hugger-mugger', 'joithead', 'lewdster', 'lout', 'maggot-pie', 'malt-worm', 'mammet', 
+        'measle', 'minnow', 'miscreant', 'moldwarp', 'mumble-news', 'nut-hook', 'pigeon-egg', 'pignut', 
+        'puttock', 'pumpion', 'ratsbane', 'scut', 'skainsmate', 'strumpet', 'varlot', 'vassal', 'wheyface', 
+        'wagtail'
+    ]
+}
+
+@app.route('/shakespeare-insult', methods=['GET'])
+def get_shakespeare_insult():
+    part1 = random.choice(insults["part1"])
+    part2 = random.choice(insults["part2"])
+    part3 = random.choice(insults["part3"])
+    insult = f"Thou {part1} {part2} {part3}"
+    return jsonify({"insult": insult})
 
 if __name__ == '__main__':
     app.run(debug=True)
