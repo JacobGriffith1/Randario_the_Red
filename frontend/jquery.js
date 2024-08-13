@@ -79,6 +79,10 @@ $(document).ready(function() {
         $.ajax({
             url: 'https://love-quote.p.rapidapi.com/lovequote',
             method: 'GET',
+            headers: {
+                'x-rapidapi-key': '7387755acemsh5ca89585b8ce843p114431jsn9b4903b4b38a',
+                'x-rapidapi-host': 'love-quote.p.rapidapi.com'
+            },
             success: function(data) {
                 var fact = data.text;
                 $('.frog_quote').text(fact);
