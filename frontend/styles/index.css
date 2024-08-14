@@ -80,15 +80,15 @@ body {
 
 .frog_image img {
     position: absolute;
-    width: 125px;
-    right: 13%;
+    width: 100px;
+    right: 15%;
     height: auto;
-    bottom: 12%;
+    bottom: 13%;
  }
  
  .frog_textbox {
      position: absolute;
-     bottom: 30%; /* Adjust positioning */
+     bottom: 27%; /* Adjust positioning */
      right: 9%; /* Adjust positioning */
      background-image: url('/images/scroll.png'); /* Your scroll image */
      background-size: contain;

@@ -36,7 +36,7 @@ $(document).ready(function() {
             url: 'https://aphorismcookie.herokuapp.com',
             method: 'GET',
             success: function(data) {
-                var fact = data.data.message;
+                var fact = `"${data.data.message}"`;
                 $('.wizard_quote').text(fact);
                 $('.wizard_image img').attr('src', '/images/Wizard Painted Ball.png');
                 $('.crystal_ball img').hide();
