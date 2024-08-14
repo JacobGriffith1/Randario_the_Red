@@ -36,8 +36,17 @@ $(document).ready(function() {
             url: 'https://aphorismcookie.herokuapp.com',
             method: 'GET',
             success: function(data) {
-                var fact = data.text;
-                $('.crystal_quote').text(fact);
+                var fact = data.data.message;
+                $('.wizard_quote').text(fact);
+                $('.wizard_image img').attr('src', '/images/Wizard Painted Ball.png');
+                $('.crystal_ball img').hide();
+                setTimeout(function (){
+                    $('.wizard_image img').attr('src', '/images/wizardNeutral.png');
+                  }, 1000);
+                setTimeout(function (){
+                    $('.crystal_ball img').show();
+                }, 1000);
+                
                 console.log('quote changed!');
             },
             error: function() {
@@ -47,7 +56,7 @@ $(document).ready(function() {
         });
     }
 
-    $('.crystal_image').on('click', function() {
+    $('.crystal_ball').on('click', function() {
         console.log('crystal clicked!');
         fetchRandomFortune();
     });
@@ -86,16 +95,18 @@ $(document).ready(function() {
             success: function(data) {
                 var fact = data.quote;
                 $('.frog_quote').text(fact);
-                $('.frog_image img').attr('src', '/images/frog01.png');
+                setTimeout(function (){
+                    $('.frog_image img').attr('src', '/images/frog01.png');
+                }, 400);
                 setTimeout(function (){
                     $('.frog_image img').attr('src', '/images/frog02.png');
-                }, 500);
+                }, 400);
                 setTimeout(function (){
                     $('.frog_image img').attr('src', '/images/frog03.png');
-                }, 500);
+                }, 600);
                 setTimeout(function (){
                     $('.frog_image img').attr('src', '/images/frog00.png');
-                }, 500);
+                }, 800);
                 console.log('quote changed!');
             },
             error: function() {

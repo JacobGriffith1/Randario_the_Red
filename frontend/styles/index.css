@@ -70,6 +70,14 @@ body {
     flex: 1;
 }
 
+.crystal_ball img {
+    position: absolute;
+    width: 80px;
+    left: 39%;
+    height: auto;
+    bottom: 28%; 
+ }
+
 .frog_image img {
     position: absolute;
     width: 125px;
