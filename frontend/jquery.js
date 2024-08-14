@@ -74,26 +74,16 @@ $(document).ready(function() {
                 $('.dad_joke').text(fact);
                 console.log('quote changed!');
                 console.log(fact);
-    
-                // Hide the fireball initially
-                $('.fire_ball').hide();
-    
-                // Show Jeff and change the image to fireball01
-                $('.jeff img').attr('src', '/images/fireball01.png');
-                $('.jeff img').attr('hidden', false);
-    
-                // Change the image to fireball02
+                setTimeout(function (){
+                    $('.jeff img').attr('src', '/images/fireball01.png');
+                }, 400);
                 setTimeout(function (){
                     $('.jeff img').attr('src', '/images/fireball02.png');
-                }, 400);
-
-                // Hide Jeff again
+                }, 500);
                 setTimeout(function (){
-                    $('.jeff img').attr('hidden', true);
-                }, 1500);
-    
-                // Show the fireball again
-                $('.fire_ball').show();
+                    $('.jeff img').attr('src', '/images/fireball00.png');
+                }, 2000);
+                
             },
             error: function() {
                 $('.dad_joke').text('You aren’t holding the flashlight!');
@@ -102,7 +92,7 @@ $(document).ready(function() {
         });
     }
 
-    $('.fire_ball').on('click', function() {
+    $('.jeff').on('click', function() {
         console.log('jeff clicked!');
         fetchRandomJoke();
     });

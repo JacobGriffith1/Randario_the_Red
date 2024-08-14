@@ -78,14 +78,6 @@ body {
     bottom: 28%; 
 }
 
-.fire_ball img {
-    position: absolute;
-    width: 40px;
-    right: 41.75%;
-    height: auto;
-    bottom: 36%; 
-}
-
 .candle img {
     position: absolute;
     width: 25px;
@@ -97,7 +89,7 @@ body {
 .jeff img {
     position: absolute;
     width: 75px;
-    right: 41%;
+    right: 40.5%;
     height: auto;
     bottom: 36%; 
 }
