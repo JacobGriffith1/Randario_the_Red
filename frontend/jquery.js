@@ -15,7 +15,7 @@ $(document).ready(function() {
                 $('.wizard_image img').attr('src', '/images/wizardHappy.png');
                 setTimeout(function (){
                     $('.wizard_image img').attr('src', '/images/wizardNeutral.png');
-                  }, 1000);
+                }, 1000);
                 console.log('quote changed!');
             },
             error: function() {
@@ -61,25 +61,49 @@ $(document).ready(function() {
         fetchRandomFortune();
     });
 
-    //-- Dad Joke Book --
+    //-- Dad Jokes --
     function fetchRandomJoke() {
         $.ajax({
             url: 'https://icanhazdadjoke.com/',
             method: 'GET',
+            headers: {
+                'Accept': 'application/json'
+            },
             success: function(data) {
-                var fact = data.text;
-                $('.dad_quote').text(fact);
+                var fact = data.joke;
+                $('.dad_joke').text(fact);
                 console.log('quote changed!');
+                console.log(fact);
+    
+                // Hide the fireball initially
+                $('.fire_ball').hide();
+    
+                // Show Jeff and change the image to fireball01
+                $('.jeff img').attr('src', '/images/fireball01.png');
+                $('.jeff img').attr('hidden', false);
+    
+                // Change the image to fireball02
+                setTimeout(function (){
+                    $('.jeff img').attr('src', '/images/fireball02.png');
+                }, 400);
+
+                // Hide Jeff again
+                setTimeout(function (){
+                    $('.jeff img').attr('hidden', true);
+                }, 1500);
+    
+                // Show the fireball again
+                $('.fire_ball').show();
             },
             error: function() {
-                $('.dad_quote').text('You arent holding the flashlight!');
+                $('.dad_joke').text('You aren’t holding the flashlight!');
                 console.log('error!');
             }
         });
     }
 
-    $('.dad_image').on('click', function() {
-        console.log('dad clicked!');
+    $('.fire_ball').on('click', function() {
+        console.log('jeff clicked!');
         fetchRandomJoke();
     });
 

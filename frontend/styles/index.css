@@ -76,7 +76,57 @@ body {
     left: 39%;
     height: auto;
     bottom: 28%; 
- }
+}
+
+.fire_ball img {
+    position: absolute;
+    width: 40px;
+    right: 41.75%;
+    height: auto;
+    bottom: 36%; 
+}
+
+.candle img {
+    position: absolute;
+    width: 25px;
+    right: 42%;
+    height: auto;
+    bottom: 28%;  
+}
+
+.jeff img {
+    position: absolute;
+    width: 75px;
+    right: 41%;
+    height: auto;
+    bottom: 36%; 
+}
+
+.jeff_textbox {
+    position: absolute;
+    bottom: 55%; /* Adjust positioning */
+    right: 30%; /* Adjust positioning */
+    background-image: url('/images/scroll.png'); /* Your scroll image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
+    padding: 20px;
+    width: 250px; /* Adjust as needed */
+    height: 200px;
+    opacity: 0.8; /* Adjust opacity if needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dad_joke {
+    font-family: 'enchanted_land';
+    max-width: 200px;
+    font-size: 1.3em; /* Adjust font size as needed */
+    text-align: center;
+    flex: 1;
+}
 
 .frog_image img {
     position: absolute;
@@ -84,7 +134,7 @@ body {
     right: 15%;
     height: auto;
     bottom: 13%;
- }
+}
  
  .frog_textbox {
      position: absolute;
