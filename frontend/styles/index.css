@@ -70,6 +70,39 @@ body {
     flex: 1;
 }
 
+.frog_image img {
+    position: absolute;
+    width: 125px;
+    right: 13%;
+    height: auto;
+    bottom: 12%;
+ }
+ 
+ .frog_textbox {
+     position: absolute;
+     bottom: 30%; /* Adjust positioning */
+     right: 9%; /* Adjust positioning */
+     background-image: url('/images/scroll.png'); /* Your scroll image */
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-position: center;
+     color: black;
+     padding: 20px;
+     width: 250px; /* Adjust as needed */
+     height: 200px;
+     opacity: 0.8; /* Adjust opacity if needed */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ .frog_quote {
+     font-family: 'enchanted_land';
+     max-width: 200px;
+     font-size: 1.3em; /* Adjust font size as needed */
+     text-align: center;
+     flex: 1;
+ }
+
 .footer_content {
     width: 100%;
     height: 20px;
