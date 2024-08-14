@@ -18,10 +18,10 @@ Randario the Red is an enchanting experience designed to bring a smile to your f
 
 Interact with the various elements on our page to receive:
 
-- **Random Facts**: Fascinating tidbits of knowledge from our wizard.
-- **Fortunes**: Predictions and insights from the crystal ball.
-- **Dad Jokes**: Classic humor served up by the candle and flame.
-- **Love Advice**: Passion and love quotes from the frog.
+- **Random Facts**: Click on Randario, for the Fascinating tidbits of knowledge from our wizard.
+- **Fortunes**: Click on Frankie Fortuna, for Predictions and insights from the crystal ball.
+- **Dad Jokes**: Click on the Jeff, for absolute heaters served up by the candle and flame.
+- **Love Advice**: Click on Ribberto, for Passion and love quotes from the frog looking for his princess.
 
 ### Get Involved
 
