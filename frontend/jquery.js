@@ -145,25 +145,3 @@ $(document).ready(function() {
         fetchRandomAdvice();
     });
 });
-
-    //-- Shakespeare Insults --
-    function fetchShakespeareInsult() {
-        $.ajax({
-            url: '/shakespeare-insult',
-            method: 'GET',
-            success: function(data) {
-                var insult = data.insult;
-                $('.shakespeare_quote').text(insult);
-                console.log('insult displayed!');
-            },
-            error: function() {
-                $('.shakespeare_quote').text('Alas! Something went amiss!');
-                console.log('error fetching insult!');
-            }
-        });
-    }
-
-    $('.shakespeare_image').on('click', function() {
-        console.log('shakespeare clicked!');
-        fetchShakespeareInsult();
-    });
