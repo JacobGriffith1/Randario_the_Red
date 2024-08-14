@@ -42,10 +42,10 @@ $(document).ready(function() {
                 $('.crystal_ball img').hide();
                 setTimeout(function (){
                     $('.wizard_image img').attr('src', '/images/wizardNeutral.png');
-                  }, 1000);
+                  }, 3000);
                 setTimeout(function (){
                     $('.crystal_ball img').show();
-                }, 1000);
+                }, 3000);
                 
                 console.log('quote changed!');
             },
@@ -82,7 +82,7 @@ $(document).ready(function() {
                 }, 500);
                 setTimeout(function (){
                     $('.jeff img').attr('src', '/images/fireball00.png');
-                }, 2000);
+                }, 3000);
                 
             },
             error: function() {
