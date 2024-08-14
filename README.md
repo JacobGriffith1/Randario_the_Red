@@ -13,6 +13,9 @@ Randario the Red is an enchanting experience designed to bring a smile to your f
 
 ### How It Works
 
+- In Visual Studio Code, install the "Live Server" extension. 
+- Right click 'index.html' and 'Open with Live Server'; or with 'index.html' open, use [Alt+L] , [Alt+O]
+
 Interact with the various elements on our page to receive:
 
 - **Random Facts**: Fascinating tidbits of knowledge from our wizard.
@@ -24,10 +27,9 @@ Interact with the various elements on our page to receive:
 
 Feel the magic, share the laughter, and be enchanted. Explore each feature, and let Randario the Red add a touch of wonder to your day!
 
-(add the url or way to watch our site)
 
 Happy enchanting! ✨
 
-- **Jacob Griffith <https://github.com/JacobGriffith1>
-- **Tanner Saint <https://github.com/TrippyVaultBoy>
-- **Tamara Walling <https://github.com/Scoob1>
+- Jacob Griffith <https://github.com/JacobGriffith1>
+- Tanner Saint <https://github.com/TrippyVaultBoy>
+- Tamara Walling <https://github.com/Scoob1>
