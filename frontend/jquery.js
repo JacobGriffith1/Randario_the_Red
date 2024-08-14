@@ -80,11 +80,11 @@ $(document).ready(function() {
             url: 'https://love-quote.p.rapidapi.com/lovequote',
             method: 'GET',
             headers: {
-                'x-rapidapi-key': '7387755acemsh5ca89585b8ce843p114431jsn9b4903b4b38a',
+                'x-rapidapi-key': '4d5d94ef5emsh5d6e48794116cfcp196244jsn3e9735c2b05d',
                 'x-rapidapi-host': 'love-quote.p.rapidapi.com'
             },
             success: function(data) {
-                var fact = data.text;
+                var fact = data.quote;
                 $('.frog_quote').text(fact);
                 console.log('quote changed!');
             },
@@ -101,6 +101,7 @@ $(document).ready(function() {
     });
 });
 
+    //-- Shakespeare Insults --
     function fetchShakespeareInsult() {
         $.ajax({
             url: '/shakespeare-insult',
