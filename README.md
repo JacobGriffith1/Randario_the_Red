@@ -18,3 +18,14 @@ Randario the Red is an interactive web application featuring a whimsical wizard,
 - **Shakespearean Insults**: Click on the fairy to receive a Shakespearean insult.
 
 ## Installation
+## Usage
+## Credits
+
+- **Development Team**: Jacob Griffith, Tanner Saint, Tamara Walling.
+- **APIs Used**:
+  - Random Facts: [Useless Facts API](https://uselessfacts.jsph.pl/)
+  - Dad Jokes: [icanhazdadjoke API](https://icanhazdadjoke.com/)
+  - Fortunes: [Fortune Cookie API](https://rapidapi.com/wh-iterabb-it-wh-iterabb-it-default/api/fortune-cookie4)
+  - Love Advice: . [Love advice API](https://love-quote.p.rapidapi.com/lovequote)
+  - Shakespearean Insults: Custom API developed for this project.
+
