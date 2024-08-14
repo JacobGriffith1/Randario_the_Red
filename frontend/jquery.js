@@ -86,6 +86,16 @@ $(document).ready(function() {
             success: function(data) {
                 var fact = data.quote;
                 $('.frog_quote').text(fact);
+                $('.frog_image img').attr('src', '/images/frog01.png');
+                setTimeout(function (){
+                    $('.frog_image img').attr('src', '/images/frog02.png');
+                }, 500);
+                setTimeout(function (){
+                    $('.frog_image img').attr('src', '/images/frog03.png');
+                }, 500);
+                setTimeout(function (){
+                    $('.frog_image img').attr('src', '/images/frog00.png');
+                }, 500);
                 console.log('quote changed!');
             },
             error: function() {
