@@ -12,9 +12,9 @@ $(document).ready(function() {
             success: function(data) {
                 var fact = data.text;
                 $('.wizard_quote').text(fact);
-                $('.wizard_image img').attr('src', '/images/wizardHappy.png');
+                $('.wizard_image img').attr('src', 'images/wizardHappy.png');
                 setTimeout(function (){
-                    $('.wizard_image img').attr('src', '/images/wizardNeutral.png');
+                    $('.wizard_image img').attr('src', 'images/wizardNeutral.png');
                 }, 1000);
                 console.log('quote changed!');
             },
@@ -38,10 +38,10 @@ $(document).ready(function() {
             success: function(data) {
                 var fact = `"${data.data.message}"`;
                 $('.wizard_quote').text(fact);
-                $('.wizard_image img').attr('src', '/images/Wizard Painted Ball.png');
+                $('.wizard_image img').attr('src', 'images/Wizard Painted Ball.png');
                 $('.crystal_ball img').hide();
                 setTimeout(function (){
-                    $('.wizard_image img').attr('src', '/images/wizardNeutral.png');
+                    $('.wizard_image img').attr('src', 'images/wizardNeutral.png');
                   }, 3000);
                 setTimeout(function (){
                     $('.crystal_ball img').show();
@@ -75,13 +75,13 @@ $(document).ready(function() {
                 console.log('quote changed!');
                 console.log(fact);
                 setTimeout(function (){
-                    $('.jeff img').attr('src', '/images/fireball01.png');
+                    $('.jeff img').attr('src', 'images/fireball01.png');
                 }, 400);
                 setTimeout(function (){
-                    $('.jeff img').attr('src', '/images/fireball02.png');
+                    $('.jeff img').attr('src', 'images/fireball02.png');
                 }, 500);
                 setTimeout(function (){
-                    $('.jeff img').attr('src', '/images/fireball00.png');
+                    $('.jeff img').attr('src', 'images/fireball00.png');
                 }, 3000);
                 
             },
@@ -110,16 +110,16 @@ $(document).ready(function() {
                 var fact = data.quote;
                 $('.frog_quote').text(fact);
                 setTimeout(function (){
-                    $('.frog_image img').attr('src', '/images/frog01.png');
+                    $('.frog_image img').attr('src', 'images/frog01.png');
                 }, 400);
                 setTimeout(function (){
-                    $('.frog_image img').attr('src', '/images/frog02.png');
+                    $('.frog_image img').attr('src', 'images/frog02.png');
                 }, 400);
                 setTimeout(function (){
-                    $('.frog_image img').attr('src', '/images/frog03.png');
+                    $('.frog_image img').attr('src', 'images/frog03.png');
                 }, 600);
                 setTimeout(function (){
-                    $('.frog_image img').attr('src', '/images/frog00.png');
+                    $('.frog_image img').attr('src', 'images/frog00.png');
                 }, 800);
                 console.log('quote changed!');
             },

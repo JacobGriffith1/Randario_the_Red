@@ -31,7 +31,7 @@ body {
 .background_content {
     width: 100%;
     height: 800px;
-    background-image: url("/images/houseInterior.jpg");
+    background-image: url("images/houseInterior.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -49,7 +49,7 @@ body {
     position: absolute;
     bottom: 60%; /* Adjust positioning */
     left: 16%; /* Adjust positioning */
-    background-image: url('/images/scroll.png'); /* Your scroll image */
+    background-image: url('images/scroll.png'); /* Your scroll image */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -98,7 +98,7 @@ body {
     position: absolute;
     bottom: 55%; /* Adjust positioning */
     right: 30%; /* Adjust positioning */
-    background-image: url('/images/scroll.png'); /* Your scroll image */
+    background-image: url('images/scroll.png'); /* Your scroll image */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -132,7 +132,7 @@ body {
      position: absolute;
      bottom: 27%; /* Adjust positioning */
      right: 9%; /* Adjust positioning */
-     background-image: url('/images/scroll.png'); /* Your scroll image */
+     background-image: url('images/scroll.png'); /* Your scroll image */
      background-size: contain;
      background-repeat: no-repeat;
      background-position: center;
