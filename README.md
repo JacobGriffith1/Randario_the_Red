@@ -45,7 +45,7 @@ Happy enchanting! ✨
 
 ### Additional Details
 
-Randario the Red was the first big independently led project undertaken by Tanner, Tamara, and Me during our education at Atlas School. I have opted to leave the code as it is, only modifying comments within as a sort of benchmark of what our skills looked like after just a few months of coding experience. Our growth has been exponential since then and I hope you enjoy seeing our humble beginnings.
+Randario the Red was the first big independently led project undertaken by Tanner, Tamara, and Me during our education at Atlas School. I have opted to leave the code as it is, only modifying comments, as a sort of benchmark of what our skills looked like after just a few months of coding experience. Our growth has been exponential since then and I hope you enjoy seeing our humble beginnings.
 
 Please enjoy Randario the Red and look forward to future enchanting projects!
 -JG
