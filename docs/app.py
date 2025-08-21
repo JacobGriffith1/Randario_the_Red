@@ -6,7 +6,7 @@ import random
 app = Flask(__name__)
 CORS(app)
 
-
+#--------------------Wizard Facts--------------------
 @app.route('/wizard/fact', methods=['GET'])
 def get_wizard_fact():
     # New API URL for random facts
@@ -34,15 +34,15 @@ def get_wizard_fact():
         print(f"Error occurred: {e}")
         return jsonify({"error": "An unexpected error occurred"}), 500
 
-
+#--------------------Crystal Ball--------------------
 @app.route('/crystal-ball', methods=['GET'])
 def get_fortune():
     api_url = "https://aphorismcookie.herokuapp.com"
-
+    
     try:
         response = requests.get(api_url)
-        print(f"API Response Status Code: {response.status_code}")  # Debugging statement
-        print(f"API Response Text: {response.text}")  # Debugging statement
+        print(f"API Response Status Code: {response.status_code}")
+        print(f"API Response Text: {response.text}")
 
         if response.status_code != 200:
             return jsonify({"error": f"API request failed with status {response.status_code}: {response.text}"}), 500
@@ -53,16 +53,17 @@ def get_fortune():
         return jsonify({"fortune": fortune_message})
 
     except Exception as e:
-        print(f"Error occurred: {e}")  # Debugging statement
+        print(f"Error occurred: {e}")
         return jsonify({"error": "An unexpected error occurred"}), 500
 
-
+#--------------------Dad Jokes--------------------
 @app.route('/dad-joke', methods=['GET'])
 def get_dad_joke():
     api_url = 'https://icanhazdadjoke.com/'
     headers = {
         'Accept': 'application/json',
     }
+
     try:
         response = requests.get(api_url, headers=headers)
         response.raise_for_status()
@@ -73,7 +74,7 @@ def get_dad_joke():
         print(f"Error occurred: {e}")
         return jsonify({"error": "Failed to fetch data from the dad joke API"}), 500
 
-
+#--------------------Love Quotes--------------------
 @app.route('/frog-love-advice', methods=['GET'])
 def get_love_advice():
     api_url = "https://love-quote.p.rapidapi.com/lovequote"
@@ -84,7 +85,7 @@ def get_love_advice():
 
     try:
         response = requests.get(api_url, headers=headers)
-        response.raise_for_status()  # Raise an exception for HTTP errors
+        response.raise_for_status()
         advice_data = response.json()
         advice = advice_data.get('quote', 'No advice available')
         return jsonify({"advice": advice})
